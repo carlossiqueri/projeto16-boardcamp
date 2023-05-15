@@ -57,3 +57,14 @@ export const postRental = async (req, res) => {
   }
 };
 
+export const getRentals = async (req, res) => {
+    try{
+        const unformatRentals = await db.query(`
+            SELECT rentals.*,
+            customers.id AS customers_id,
+            customers.name AS customers_name
+        `)
+    } catch (err) {
+    res.status(500).send(err.message);
+  }
+}
