@@ -61,8 +61,12 @@ export const getRentals = async (req, res) => {
     try{
         const unformatRentals = await db.query(`
             SELECT rentals.*,
-            customers.id AS customers_id,
-            customers.name AS customers_name
+            customers.id AS customer_id,
+            customers.name AS customer_name,
+            games.id AS game_id,
+            games.name AS game_name
+            FROM rentals
+            JOIN costumers on retals."costumerId"
         `)
     } catch (err) {
     res.status(500).send(err.message);

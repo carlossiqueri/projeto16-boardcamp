@@ -3,11 +3,11 @@ import {
   postCustomers,
   getCustomers,
   getCustomersById,
+  updateCustomer,
 } from "../controllers/customers.controllers.js";
 import {
   customerMiddleware,
   customerByIdMiddleware,
-  updateCustomer,
 } from "../middlewares/customers.middleware.js";
 
 const customersRouter = Router();

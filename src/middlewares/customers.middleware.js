@@ -1,10 +1,10 @@
 import { db } from "../database/database.connection.js";
-import gameSchema from "../schemas/gameSchema.js";
+import customerSchema from "../schemas/customerSchema.js";
 
 const customerMiddleware = async (req, res, next) => {
   const { cpf } = req.body;
 
-  const validate = gameSchema.validate(req.body, { abortEarly: false });
+  const validate = customerSchema.validate(req.body, { abortEarly: false });
 
   if (validate.error) {
     const errors = validate.error.details.map((detail) => detail.message);
