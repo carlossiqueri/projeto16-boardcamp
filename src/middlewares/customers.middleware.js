@@ -18,6 +18,7 @@ const customerMiddleware = async (req, res, next) => {
     );
 
     if (validateCpf.rows[0]) return res.sendStatus(409);
+    res.send(201);
   } catch (err) {
     res.status(500).send(err.message);
   }

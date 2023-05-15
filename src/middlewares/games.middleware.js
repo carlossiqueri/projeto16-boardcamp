@@ -17,6 +17,7 @@ const gamesMiddleware = async (req, res, next) => {
       res.sendStatus(409);
       return;
     }
+    res.sendStatus(201);
   } catch (err) {
     res.status(500).send(err.message);
   }
