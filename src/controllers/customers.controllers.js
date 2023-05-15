@@ -36,7 +36,7 @@ export const getCustomersById = async (req, res) => {
       `SELECT * FROM customers WHERE id=($1);`,
       [id]
     );
-    res.send(customerById.rows[0]);
+    res.status(200).send(customerById.rows[0]);
   } catch (err) {
     res.status(500).send(err.message);
   }

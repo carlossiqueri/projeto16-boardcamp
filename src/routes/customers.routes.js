@@ -17,7 +17,6 @@ customersRouter.get("/customers", getCustomers);
 customersRouter.get("/customes/:id", customerByIdMiddleware, getCustomersById);
 customersRouter.put(
   "/customers/:id",
-  customerByIdMiddleware,
   customerMiddleware,
   updateCustomer
 );
