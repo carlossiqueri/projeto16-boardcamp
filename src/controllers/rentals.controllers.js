@@ -1,4 +1,4 @@
-import { db } from "../database/database.connection.js;
+import { db } from "../database/database.connection.js";
 import dayjs from "dayjs";
 
 export const postRental = async (req, res) => {
